@@ -232,7 +232,7 @@ class Dataset(object):
 
         print('Creating directory "{}"'.format(dataset_dir))
         mkdir_if_missing(dataset_dir)
-        fpath = osp.join(dataset_dir, osp.basename(dataset_url))
+        fpath = "Market-1501-v15.09.15.zip" #osp.join(dataset_dir, osp.basename(dataset_url))
 
         print(
             'Downloading {} dataset to "{}"'.format(

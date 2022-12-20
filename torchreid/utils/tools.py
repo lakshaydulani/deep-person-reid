@@ -67,7 +67,6 @@ def set_random_seed(seed):
 
 
 def gdown_url(url,dst):
-    print(dst, os.getcwd())
     gdown.download(url=url, quiet=False, fuzzy=True)
 
 
