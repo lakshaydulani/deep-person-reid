@@ -73,6 +73,9 @@ def gdown_url(url,dst):
 
 
 def download_url(url, dst):
+    if url.startswith('https://drive.google.com'):
+        gdown_url(url,dst)
+        return
     """Downloads file from a url to a destination.
 
     Args:
