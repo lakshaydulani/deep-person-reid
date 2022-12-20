@@ -11,6 +11,7 @@ import warnings
 import PIL
 import torch
 from PIL import Image
+import gdown
 
 __all__ = [
     'mkdir_if_missing', 'check_isfile', 'read_json', 'write_json',
@@ -63,6 +64,12 @@ def set_random_seed(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+
+
+def gdown_url(url,dst):
+    print(dst, os.getcwd())
+    gdown.download(url=url, quiet=False, fuzzy=True)
+
 
 
 def download_url(url, dst):
